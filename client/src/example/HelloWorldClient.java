@@ -14,7 +14,7 @@ public class HelloWorldClient {
           // invoke business method
 //          service.businessMethod();
           HelloWorld service=new HelloWorldServiceLocator().getHelloWorldPort();
-          String name=new String("tzf");
+          String name = new String("tzf");
           System.out.println(service.sayHelloWorldFrom(name));
       } catch (javax.xml.rpc.ServiceException ex) {
           ex.printStackTrace();
