@@ -8,5 +8,6 @@
 package mypackage;
 
 public interface HelloWorld extends java.rmi.Remote {
+    public java.lang.String getPhoneStr(java.lang.String arg0) throws java.rmi.RemoteException;
     public java.lang.String sayHelloWorldFrom(java.lang.String arg0) throws java.rmi.RemoteException;
 }

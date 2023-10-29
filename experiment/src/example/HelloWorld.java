@@ -11,6 +11,10 @@ public class HelloWorld {
     System.out.println(result);
     return result;
   }
+  @WebMethod
+  public String getPhoneStr(String in) {
+    return in;
+  }
   public static void main(String[] argv) {
     Object implementor = new HelloWorld ();
     String address = "http://localhost:22200/HelloWorld";
