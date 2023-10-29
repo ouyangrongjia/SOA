@@ -25,12 +25,17 @@ public class HelloWorld {
         return getPhoneStr(input, input.length());
     }
 
+    /**
+     * @param input 输入字符串
+     * @param num 解析字符串的位数
+     * @return 结果
+     */
     @WebMethod
     public static List<String> getPhoneStr(String input, int num) {
         res.clear();
         if (Pattern.matches("[2-9]+", input)) {
-            len = Math.min(num, input.length());
             input = String.format("%-" + num + "s", input).replace(' ', '1');
+            len = num;
             dfs(0, input, "");
         }
         return res;
@@ -40,7 +45,8 @@ public class HelloWorld {
         boolean ret = (dps + 1 == len);
         for (Character c : chars[input.charAt(dps) - '1'].toCharArray()) {
             if (ret) {
-                res.add(str + c);
+                str = (str + c).trim();
+                if (!str.isEmpty()) res.add(str);
                 continue;
             }
             dfs(dps + 1, input, str + c);
@@ -51,6 +57,7 @@ public class HelloWorld {
         Object implementor = new HelloWorld();
         String address = "http://localhost:22200/HelloWorld";
         Endpoint.publish(address, implementor);
-//        System.out.println(getPhoneStr("27954386"));
+//        System.out.println(getPhoneStr("2", 2));
+//        System.out.println(getPhoneStr("272978675"));
     }
 }
