@@ -25,7 +25,7 @@
   </binding>
   <service name="HelloWorld">
     <port name="HelloWorld" binding="tns:HelloWorldBinding">
-      <soap:address location="http://localhost:22200/HelloWorld"/>
+      <soap:address location="http://localhost:8080//services/example/HelloWorld"/>
     </port>
   </service>
 </definitions>

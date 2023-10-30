@@ -9,9 +9,9 @@ import java.util.regex.Pattern;
 
 @WebService()
 public class HelloWorld {
-    private static final String[] chars = {" ", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-    private static final List<String> res = new ArrayList<>();
-    private static int len;
+    public static final String[] chars = {" ", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    public static final List<String> res = new ArrayList<>();
+    public static int len;
 
     @WebMethod
     public String sayHelloWorldFrom(String from) {
@@ -21,32 +21,23 @@ public class HelloWorld {
     }
 
     @WebMethod
-    public static List<String> getPhoneStr(String input) {
-        return getPhoneStr(input, input.length());
-    }
-
-    /**
-     * @param input 输入字符串
-     * @param num 解析字符串的位数
-     * @return 结果
-     */
-    @WebMethod
-    public static List<String> getPhoneStr(String input, int num) {
+    public String[] getPhoneStr(String input) {
+        int num = 2;
         res.clear();
-        if (Pattern.matches("[2-9]+", input)) {
+        if (Pattern.matches("[2-9]{1,2}", input)) {
             input = String.format("%-" + num + "s", input).replace(' ', '1');
             len = num;
             dfs(0, input, "");
         }
-        return res;
+        return res.toArray(new String[res.size()]);
     }
 
-    private static void dfs(int dps, String input, String str) {
+    private void dfs(int dps, String input, String str) {
         boolean ret = (dps + 1 == len);
         for (Character c : chars[input.charAt(dps) - '1'].toCharArray()) {
             if (ret) {
-                str = (str + c).trim();
-                if (!str.isEmpty()) res.add(str);
+                String temp = (str + c).trim();
+                if (!temp.isEmpty()) res.add(temp);
                 continue;
             }
             dfs(dps + 1, input, str + c);
@@ -57,7 +48,5 @@ public class HelloWorld {
         Object implementor = new HelloWorld();
         String address = "http://localhost:22200/HelloWorld";
         Endpoint.publish(address, implementor);
-//        System.out.println(getPhoneStr("2", 2));
-//        System.out.println(getPhoneStr("272978675"));
     }
 }
