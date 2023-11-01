@@ -29,7 +29,7 @@
 
   <xs:complexType name="getPhoneStrResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

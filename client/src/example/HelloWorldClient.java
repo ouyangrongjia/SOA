@@ -3,8 +3,6 @@ package example;
 import mypackage.HelloWorld;
 import mypackage.HelloWorldServiceLocator;
 
-import java.util.Arrays;
-
 public class HelloWorldClient {
   public static void main(String[] argv) {
       try {
