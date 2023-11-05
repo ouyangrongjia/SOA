@@ -24,7 +24,7 @@ public interface DomesticAirlineHttpGet {
 
 
     /**
-     * <br /><h3>»ñµÃÕâ¹úÄÚ·É»úº½°àÊ±¿Ì±íWeb ServicesÖ§³ÖµÄÈ«²¿³ÇÊĞÖĞÓ¢ÎÄÃû³ÆºÍËõĞ´ DataSet</h3><p>ÊäÈë²ÎÊı£ºÎŞ£»·µ»ØÊı¾İ£º½á¹¹Îª Item(enCityName)³ÇÊĞÓ¢ÎÄÃû³Æ¡¢Item(cnCityName)³ÇÊĞÖĞÎÄÃû³Æ¡¢Item(Abbreviation)ËõĞ´£¬°´³ÇÊĞÓ¢ÎÄÃû³ÆÉıĞòÅÅÁĞ</p><br />
+     * <br /><h3>è·å¾—è¿™å›½å†…é£æœºèˆªç­æ—¶åˆ»è¡¨Web Servicesæ”¯æŒçš„å…¨éƒ¨åŸå¸‚ä¸­è‹±æ–‡åç§°å’Œç¼©å†™ DataSet</h3><p>è¾“å…¥å‚æ•°ï¼šæ— ï¼›è¿”å›æ•°æ®ï¼šç»“æ„ä¸º Item(enCityName)åŸå¸‚è‹±æ–‡åç§°ã€Item(cnCityName)åŸå¸‚ä¸­æ–‡åç§°ã€Item(Abbreviation)ç¼©å†™ï¼ŒæŒ‰åŸå¸‚è‹±æ–‡åç§°å‡åºæ’åˆ—</p><br />
      * 
      * @return
      *     returns example.DataSet
@@ -34,7 +34,7 @@ public interface DomesticAirlineHttpGet {
     public DataSet getDomesticCity();
 
     /**
-     * <br /><h3>»ñµÃº½°àÊ±¿Ì±í DataSet</h3><p>ÊäÈë²ÎÊı£ºstartCity = ³ö·¢³ÇÊĞ£¨ÖĞÎÄ³ÇÊĞÃû³Æ»òËõĞ´¡¢¿ÕÔòÄ¬ÈÏ£ºÉÏº££©£»lastCity = µÖ´ï³ÇÊĞ£¨ÖĞÎÄ³ÇÊĞÃû³Æ»òËõĞ´¡¢¿ÕÔòÄ¬ÈÏ£º±±¾©£©£»theDate = ³ö·¢ÈÕÆÚ£¨String ¸ñÊ½£ºyyyy-MM-dd£¬Èç£º2007-07-02£¬¿ÕÔòÄ¬ÈÏµ±Ìì£©£»userID = ÉÌÒµÓÃ»§ID£¨Ãâ·ÑÓÃ»§²»ĞèÒª£©<br />·µ»ØÊı¾İ£ºDataSet£¬Table(0)½á¹¹Îª Item(Company)º½¿Õ¹«Ë¾¡¢Item(AirlineCode)º½°àºÅ¡¢Item(StartDrome)³ö·¢»ú³¡¡¢Item(ArriveDrome)µ½´ï»ú³¡¡¢Item(StartTime)³ö·¢Ê±¼ä¡¢Item(ArriveTime)µ½´ïÊ±¼ä¡¢Item(Mode)»úĞÍ¡¢Item(AirlineStop)¾­Í£¡¢Item(Week)·ÉĞĞÖÜÆÚ£¨ĞÇÆÚ£©</p><br />
+     * <br /><h3>è·å¾—èˆªç­æ—¶åˆ»è¡¨ DataSet</h3><p>è¾“å…¥å‚æ•°ï¼šstartCity = å‡ºå‘åŸå¸‚ï¼ˆä¸­æ–‡åŸå¸‚åç§°æˆ–ç¼©å†™ã€ç©ºåˆ™é»˜è®¤ï¼šä¸Šæµ·ï¼‰ï¼›lastCity = æŠµè¾¾åŸå¸‚ï¼ˆä¸­æ–‡åŸå¸‚åç§°æˆ–ç¼©å†™ã€ç©ºåˆ™é»˜è®¤ï¼šåŒ—äº¬ï¼‰ï¼›theDate = å‡ºå‘æ—¥æœŸï¼ˆString æ ¼å¼ï¼šyyyy-MM-ddï¼Œå¦‚ï¼š2007-07-02ï¼Œç©ºåˆ™é»˜è®¤å½“å¤©ï¼‰ï¼›userID = å•†ä¸šç”¨æˆ·IDï¼ˆå…è´¹ç”¨æˆ·ä¸éœ€è¦ï¼‰<br />è¿”å›æ•°æ®ï¼šDataSetï¼ŒTable(0)ç»“æ„ä¸º Item(Company)èˆªç©ºå…¬å¸ã€Item(AirlineCode)èˆªç­å·ã€Item(StartDrome)å‡ºå‘æœºåœºã€Item(ArriveDrome)åˆ°è¾¾æœºåœºã€Item(StartTime)å‡ºå‘æ—¶é—´ã€Item(ArriveTime)åˆ°è¾¾æ—¶é—´ã€Item(Mode)æœºå‹ã€Item(AirlineStop)ç»åœã€Item(Week)é£è¡Œå‘¨æœŸï¼ˆæ˜ŸæœŸï¼‰</p><br />
      * 
      * @param startCity
      * @param theDate
